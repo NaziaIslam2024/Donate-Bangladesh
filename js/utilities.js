@@ -7,8 +7,9 @@ function showSectionById(id){
 
 function getInputFieldValueById(id){
     const inputValue = document.getElementById(id).value;
-    const inputNumber = parseFloat(inputValue);
-    return inputNumber;
+    console.log(typeof inputValue);
+   // const inputNumber = parseFloat(inputValue);
+    return inputValue;
 }
  
 function getTextFieldValueById(id){
