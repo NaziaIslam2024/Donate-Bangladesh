@@ -22,7 +22,7 @@ document.getElementById('btn-donate-noakhali')
                             </div>`;
             document.getElementById('history-container').appendChild(div);
             document.getElementById('input-donate-noakhali').value = '';
-            document.getElementById('my_modal_1').showModal();
+            successModal();
         }
         else{
             alert("Donation failed.")
@@ -49,8 +49,8 @@ document.getElementById('btn-donate-feni')
                             <p class="text-slate-400">Date: ${donationTime}</p>
                         </div>`;
         document.getElementById('history-container').appendChild(div);
-        document.getElementById('my_modal_1').showModal();
         document.getElementById('input-donate-feni').value = '';
+        successModal();
     }
     else{
         alert("Donation failed.")
@@ -75,9 +75,14 @@ document.getElementById('btn-donate-quota')
                             <p class="text-slate-400">Date: ${donationTime}</p>
                         </div>`;
         document.getElementById('history-container').appendChild(div);
-        document.getElementById('my_modal_1').showModal();
-
         document.getElementById('input-donate-quota').value = '';
+        // document.getElementById('my_modal_1').showModal();
+        // document.getElementById('quota-modal-close').addEventListener('click', function(event){
+        //     event.preventDefault();
+        //     console.log(event);
+        //     document.getElementById('my_modal_1').close();
+        // })
+        successModal();
     }
     else{
         alert("Donation failed.")
