@@ -7,15 +7,23 @@ function showSectionById(id){
 
 function getInputFieldValueById(id){
     const inputValue = document.getElementById(id).value;
-    console.log(typeof inputValue);
-   // const inputNumber = parseFloat(inputValue);
-    return inputValue;
-}
+    if(isNaN(inputValue) || inputValue === "" || inputValue < 0){
+        alert("Enter positive num for donation amount.")
+        console.log("its string")
+    }
+    else{
+        const inputNumber = parseFloat(inputValue);
+        console.log(typeof inputNumber);
+        return inputNumber;
+        }
+    }
+    
+    
  
 function getTextFieldValueById(id){
-     // console.log("it will get value by id");
      const textValue = document.getElementById(id).innerText;
      const textNumber = parseFloat(textValue);
+     console.log(typeof textNumber);
      return textNumber;
 }
  
