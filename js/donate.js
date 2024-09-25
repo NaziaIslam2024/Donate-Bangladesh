@@ -22,6 +22,7 @@ document.getElementById('btn-donate-noakhali')
                             </div>`;
             document.getElementById('history-container').appendChild(div);
             document.getElementById('input-donate-noakhali').value = '';
+            document.getElementById('my_modal_1').showModal();
         }
         else{
             alert("Donation failed.")
@@ -48,6 +49,7 @@ document.getElementById('btn-donate-feni')
                             <p class="text-slate-400">Date: ${donationTime}</p>
                         </div>`;
         document.getElementById('history-container').appendChild(div);
+        document.getElementById('my_modal_1').showModal();
         document.getElementById('input-donate-feni').value = '';
     }
     else{
@@ -73,25 +75,9 @@ document.getElementById('btn-donate-quota')
                             <p class="text-slate-400">Date: ${donationTime}</p>
                         </div>`;
         document.getElementById('history-container').appendChild(div);
+        document.getElementById('my_modal_1').showModal();
+
         document.getElementById('input-donate-quota').value = '';
-        const modal = document.createElement('dialog');
-                modal.innerHTML = `
-                                <dialog id="my_modal_1" class="modal">
-                                <div class="flex justify-center items-center flex-col text-center space-y-4 modal-box">
-                                  <h3 class="text-xl font-bold">Congrates!</h3>
-                                  <img src="assets/coin.png" alt="">
-                                  <p class="py-4">You have donated for humankind</p>
-                                  <h3 class="text-lg font-bold">Successfully</h3>
-                                  <div class="modal-action">
-                                    <form method="dialog">
-                                      
-                                      <button onclick="my_modal_1.close()" class="btn">Close Confirmation</button>
-                                    </form>
-                                  </div>
-                                </div>
-                            </dialog>
-                `
-                document.getElementById('noaForm').appendChild(modal);
     }
     else{
         alert("Donation failed.")
